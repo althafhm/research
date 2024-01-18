@@ -1,0 +1,24 @@
+{
+  "name": "jira-issue-context-ui-kit-2",
+  "version": "1.0.3",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/**/*",
+    "install-iteright": "cd static/iteright-react && npm install && npm run build",
+    "setup": "npm install && npm run install-iteright"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "dependencies": {
+    "@forge/api": "^2.18.1",
+    "@forge/bridge": "2.6.0",
+    "@forge/react": "8.0.0",
+    "@forge/resolver": "1.5.11",
+    "axios": "^1.4.0",
+    "react": "^18.2.0"
+  }
+}

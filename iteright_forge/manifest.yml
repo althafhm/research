@@ -1,0 +1,21 @@
+modules:
+  jira:issuePanel:
+    - key: iteright-forge-hello-world-panel
+      function: main
+      title: Iteright
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  jira:issueActivity:
+    - key: iteright-tab-forge-hello-world-panel
+      function: tabissue
+      title: Iteright
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: main
+      handler: index.run
+    - key: tabissue
+      handler: tab.run
+app:
+  id: ari:cloud:ecosystem::app/bcb05786-0c10-4aee-9deb-d50321674029
+permissions:
+  scopes:
+    - read:jira-work

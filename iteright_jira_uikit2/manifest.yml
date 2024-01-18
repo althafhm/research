@@ -1,0 +1,48 @@
+modules:
+  jira:issueContext:
+    - key: iteright-jira-uikit2-hello-world-issue-context
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Iteright Sample
+      description: A hello world issue context.
+      label: Hello World!
+  jira:issuePanel:
+    - key: iteright-jira-uikit2-nextjs-issue-panel
+      resource: iteright
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Iteright App!
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: iteright
+    path: static/iteright-react/build
+    tunnel:
+      port: 3000
+app:
+  id: ari:cloud:ecosystem::app/9f3ba3d4-1dd0-4117-a289-bd3b35659ba2
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+  content:
+    styles:
+      - "unsafe-inline"
+    scripts:
+      - "unsafe-inline"
+      - "unsafe-hashes"
+  external:
+    images:
+      - "*"
+    fetch:
+      client:
+        - "*"
+      backend:
+        - "*"
